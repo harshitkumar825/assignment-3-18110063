@@ -11,7 +11,7 @@ from keras.preprocessing.image import ImageDataGenerator
 # define cnn model
 def define_model():
     # load model
-    model = VGG16(include_top=False, input_shape=(224, 224, 3), weights='vgg16_weights_tf_dim_ordering_tf_kernels_notop.h5')
+    model = VGG16(include_top=False, input_shape=(224, 224, 3))
     # mark loaded layers as not trainable
     for layer in model.layers:
         layer.trainable = False
